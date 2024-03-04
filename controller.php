@@ -6,13 +6,13 @@ $koneksi = new database();
 $action = $_GET['action'];
 if($action == "add")
 {
-    $koneksi->tambah_data($_POST['id_buku'],$_POST['kategori'],$_POST['nama_buku'],$_POST['harga'],
+    $koneksi->tambah_data($_POST['idBuku'],$_POST['kategori'],$_POST['namaBuku'],$_POST['harga'],
     $_POST['stok'],$_POST['penerbit']);
     header('location:admin/v_buku.php');
 }
 elseif($action=="edit")
 {
-    $koneksi->update_data($_POST['id_buku'],$_POST['kategori'],$_POST['nama_buku'],$_POST['harga'],
+    $koneksi->update_data($_POST['idBuku'],$_POST['kategori'],$_POST['namaBuku'],$_POST['harga'],
     $_POST['stok'],$_POST['penerbit']);
     header('location:admin/v_buku.php');
 }
